@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAdminPanel" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sunrest.controller.AdminPanelController">
+   <children>
+      <VBox prefHeight="768.0" prefWidth="228.0" style="-fx-background-color: #191970;">
+         <children>
+            <Pane prefHeight="768.0" prefWidth="228.0">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="169.0" layoutX="42.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assessts/person-man.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnChefMgt" buttonType="RAISED" layoutX="1.0" layoutY="250.0" onAction="#getChefPane" prefHeight="60.0" prefWidth="228.0" text="Chefs Management" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFoodItemsMgt" buttonType="RAISED" layoutX="1.0" layoutY="310.0" onAction="#getFoodItemsPane" prefHeight="60.0" prefWidth="228.0" text="Food Item Management" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnNewCustomersOrders" buttonType="RAISED" layoutX="1.0" layoutY="370.0" onAction="#getNewCustomersOrders" prefHeight="60.0" prefWidth="228.0" text="New Customers Orders" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="1.0" layoutY="550.0" onAction="#getLogOut" prefHeight="60.0" prefWidth="228.0" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMainMenu" buttonType="RAISED" layoutY="190.0" onAction="#getMainMenu" prefHeight="60.0" prefWidth="228.0" text="Main Menu" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRegularCustomersOrders" buttonType="RAISED" layoutY="430.0" onAction="#getRegularCustomersOrders" prefHeight="60.0" prefWidth="228.0" text="Regular Customers Orders" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnViewAllOrders" buttonType="RAISED" layoutX="1.0" layoutY="490.0" onAction="#getViewAllOrders" prefHeight="60.0" prefWidth="228.0" text="View All Orders" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="rootMainAdmin" layoutX="228.0" prefHeight="768.0" prefWidth="1138.0">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="1138.0" style="-fx-background-color: #d3d3d3;" />
+            <Pane prefHeight="75.0" prefWidth="1138.0">
+               <children>
+                  <Label layoutX="140.0" layoutY="22.0" text="Admin Panel">
+                     <font>
+                        <Font name="Colonna MT" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="44.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assessts/Tasks_32px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="905.0" layoutY="11.0" prefHeight="53.0" prefWidth="190.0" style="-fx-background-color: #ffdead;" text="        Reports">
+                     <font>
+                        <Font name="Bodoni MT" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="929.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assessts/Report%20Card_48px_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="29.0" layoutY="112.0" text="Today Business...">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="28.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDate" layoutX="379.0" layoutY="110.0" prefHeight="39.0" prefWidth="190.0">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tblTodayOrders" layoutX="29.0" layoutY="165.0" prefHeight="557.0" prefWidth="1075.0">
+              <columns>
+                <TableColumn prefWidth="130.00003051757812" text="Order ID" />
+                <TableColumn prefWidth="178.0" text="Customer Name" />
+                <TableColumn prefWidth="178.0" text="Chef" />
+                <TableColumn prefWidth="189.0" text="Ordered Item" />
+                <TableColumn prefWidth="94.0" text="Qty" />
+                <TableColumn prefWidth="131.0" text="Status" />
+                <TableColumn prefWidth="174.0" text="Total Amount" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

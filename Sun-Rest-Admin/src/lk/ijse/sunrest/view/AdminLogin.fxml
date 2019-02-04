@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAdminLogin" prefHeight="550.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sunrest.controller.AdminLogin">
+   <children>
+      <ImageView fitHeight="198.0" fitWidth="212.0" layoutX="136.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assessts/person-man.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="322.0" text="User Name :">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="371.0" prefHeight="23.0" prefWidth="103.0" text="Password :">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="197.0" layoutY="317.0" prefHeight="25.0" prefWidth="190.0" promptText="Enter User Name">
+         <font>
+            <Font name="Bodoni MT Italic" size="16.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="247.0" layoutY="437.0" onAction="#getAdminPanel" prefHeight="23.0" prefWidth="140.0" style="-fx-background-color: #008000;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="169.0" layoutY="46.0" text="Admin Login">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblChangePassword" layoutX="271.0" layoutY="406.0" onMouseClicked="#changePasswordPane" text="Change Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="197.0" layoutY="366.0" prefHeight="33.0" prefWidth="190.0" promptText="Enter Password">
+         <font>
+            <Font name="Bodoni MT Italic" size="16.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootChefPanel" prefHeight="507.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sunrest.controller.ChefPanelController">
+   <children>
+      <Label layoutX="27.0" layoutY="118.0" text="Recent Orders...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="75.0" prefWidth="890.0" style="-fx-background-color: #d3d3d3;" />
+      <Pane prefHeight="75.0" prefWidth="890.0">
+         <children>
+            <Label layoutX="149.0" layoutY="19.0" text="Chef Panel">
+               <font>
+                  <Font name="Colonna MT" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="54.0" layoutX="64.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assessts/Day%20View_52px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tblNewOrders" layoutX="27.0" layoutY="149.0" onMouseClicked="#getSelectedRow" prefHeight="212.0" prefWidth="538.0">
+        <columns>
+          <TableColumn prefWidth="112.0" text="Order ID" />
+          <TableColumn prefWidth="154.0" text="Item" />
+          <TableColumn prefWidth="96.0" text="Qty" />
+          <TableColumn prefWidth="175.0" text="Total Amount" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblItems" layoutX="586.0" layoutY="149.0" prefHeight="212.0" prefWidth="278.0">
+         <columns>
+            <TableColumn prefWidth="132.0" text="Item Code" />
+            <TableColumn prefWidth="145.0" text="Item Name" />
+         </columns>
+      </TableView>
+      <Label layoutX="586.0" layoutY="111.0" text="Items...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="396.0" text="Order ID :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrderID" layoutX="112.0" layoutY="390.0" prefHeight="31.0" prefWidth="130.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="327.0" layoutY="396.0" text="Ordered Item :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemCode" layoutX="437.0" layoutY="390.0" prefHeight="31.0" prefWidth="138.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="671.0" layoutY="396.0" text="Qty:">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="718.0" layoutY="390.0" prefHeight="31.0" prefWidth="85.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnGetOrder" buttonType="RAISED" layoutX="606.0" layoutY="442.0" onAction="#getOrder" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #008000;" text="Get Order" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnFinished" buttonType="RAISED" layoutX="744.0" layoutY="442.0" onAction="#finishedOrder" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #191970;" text="Finished" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtChefID" layoutX="27.0" layoutY="80.0" prefHeight="31.0" prefWidth="128.0" promptText="Chef ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

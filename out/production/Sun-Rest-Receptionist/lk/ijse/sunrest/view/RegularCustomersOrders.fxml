@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="rootRegularCustomersOrders" prefHeight="768.0" prefWidth="1138.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sunrest.controller.RegularCustomersOrdersController">
+   <children>
+      <HBox prefHeight="75.0" prefWidth="1138.0" style="-fx-background-color: #d3d3d3;" />
+      <Pane prefHeight="75.0" prefWidth="1138.0">
+         <children>
+            <Label layoutX="159.0" layoutY="20.0" text="Regular Customers Orders">
+               <font>
+                  <Font name="Colonna MT" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="63.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assessts/User%20Menu%20Male_52px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="21.0" layoutY="139.0" text="Enter the Order Details here...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbFoodItems" labelFloat="true" layoutX="21.0" layoutY="249.0" prefHeight="25.0" prefWidth="298.0" promptText="Choose Item" />
+      <Label layoutX="227.0" layoutY="337.0" text="Qty :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="261.0" layoutY="331.0" onAction="#calculateTotal" prefHeight="31.0" prefWidth="60.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="24.0" layoutY="337.0" text="Unit Price :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnitPrice" layoutX="103.0" layoutY="331.0" prefHeight="31.0" prefWidth="111.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="570.0" layoutY="615.0" onAction="#saveOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #008000;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="686.0" layoutY="615.0" onAction="#updateOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #191970;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="799.0" layoutY="615.0" onAction="#deleteOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #ff0000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="21.0" layoutY="410.0" text="Ordered Items :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtOrderedItems" layoutX="21.0" layoutY="429.0" prefHeight="75.0" prefWidth="298.0" />
+      <Label layoutX="66.0" layoutY="554.0" text="Total Amount :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalAmount" layoutX="175.0" layoutY="548.0" prefHeight="31.0" prefWidth="146.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXComboBox fx:id="cmbCustomers" labelFloat="true" layoutX="23.0" layoutY="188.0" prefHeight="25.0" prefWidth="298.0" promptText="Choose Customer" />
+      <Label layoutX="388.0" layoutY="135.0" text="Please Select One of those...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rdBtnTakeAway" layoutX="729.0" layoutY="139.0" text="Take Away">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdBtnForNow" layoutX="926.0" layoutY="139.0" text="For Now">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton fx:id="btnTable1" buttonType="RAISED" layoutX="472.0" layoutY="316.0" onAction="#table1" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 1" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable3" buttonType="RAISED" layoutX="736.0" layoutY="316.0" onAction="#table3" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 3" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="603.0" layoutY="218.0" text="...Table Reservation...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnTable2" buttonType="RAISED" layoutX="603.0" layoutY="316.0" onAction="#table2" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 2" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable4" buttonType="RAISED" layoutX="867.0" layoutY="316.0" onAction="#table4" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 4" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable5" buttonType="RAISED" layoutX="472.0" layoutY="388.0" onAction="#table5" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 5" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable7" buttonType="RAISED" layoutX="736.0" layoutY="388.0" onAction="#table7" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 7" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable6" buttonType="RAISED" layoutX="603.0" layoutY="388.0" onAction="#table6" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 6" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable8" buttonType="RAISED" layoutX="867.0" layoutY="388.0" onAction="#table8" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 8" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable9" buttonType="RAISED" layoutX="472.0" layoutY="466.0" onAction="#table9" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 9" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable11" buttonType="RAISED" layoutX="736.0" layoutY="466.0" onAction="#table11" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 11" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable10" buttonType="RAISED" layoutX="603.0" layoutY="466.0" onAction="#table10" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 10" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTable12" buttonType="RAISED" layoutX="867.0" layoutY="466.0" onAction="#table12" prefHeight="60.0" prefWidth="119.0" style="-fx-background-color: #191970;" text="Table 12" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="358.0" layoutY="90.0" orientation="VERTICAL" prefHeight="669.0" prefWidth="10.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNewCustomers" prefHeight="768.0" prefWidth="1138.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sunrest.controller.NewCustomersOrdersController">
+   <children>
+      <HBox prefHeight="75.0" prefWidth="1138.0" style="-fx-background-color: #d3d3d3;" />
+      <Pane prefHeight="75.0" prefWidth="1138.0">
+         <children>
+            <Label layoutX="159.0" layoutY="20.0" text="New Customers Orders">
+               <font>
+                  <Font name="Colonna MT" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="61.0" layoutX="63.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assessts/User%20Menu%20Male_52px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="890.0" layoutY="16.0" onAction="#backToMainMenuAgain" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #add8e6;" text="Back to Main Menu">
+               <font>
+                  <Font name="Bodoni MT" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Label layoutX="32.0" layoutY="125.0" text="Enter the Customers Details here...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="37.0" layoutY="220.0" prefHeight="29.0" prefWidth="259.0" promptText="Customer Name :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="36.0" layoutY="278.0" prefHeight="29.0" prefWidth="259.0" promptText="Customer Address :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerTele" labelFloat="true" layoutX="36.0" layoutY="337.0" prefHeight="29.0" prefWidth="259.0" promptText="Customer Tele :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="346.0" layoutY="84.0" orientation="VERTICAL" prefHeight="651.0" prefWidth="7.0" />
+      <Label layoutX="32.0" layoutY="384.0" text="Enter the Order Details here...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbFoodItems" labelFloat="true" layoutX="29.0" layoutY="436.0" onMouseClicked="#getSelectedOne" prefHeight="25.0" prefWidth="156.0" promptText="Choose Item" />
+      <Label layoutX="197.0" layoutY="439.0" text="Qty :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="231.0" layoutY="433.0" onAction="#calculateLoadTableTotal" prefHeight="31.0" prefWidth="60.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="14.0" layoutY="686.0" onAction="#saveOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #008000;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="130.0" layoutY="686.0" onAction="#updateOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #191970;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="243.0" layoutY="686.0" onAction="#deleteOrder" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #ff0000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Colonna MT" size="21.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="31.0" layoutY="551.0" text="Total Amount :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalAmount" layoutX="148.0" layoutY="545.0" prefHeight="31.0" prefWidth="146.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="362.0" layoutY="110.0" text="Recent Orders...">
+         <font>
+            <Font name="Bodoni MT Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerID" labelFloat="true" layoutX="37.0" layoutY="163.0" prefHeight="29.0" prefWidth="259.0" promptText="Customer ID :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TextField fx:id="txtOrderID" layoutX="38.0" layoutY="84.0" prefHeight="31.0" prefWidth="128.0" promptText="Order ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="32.0" layoutY="504.0" text="Unit Price :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnitPrice" layoutX="149.0" layoutY="498.0" prefHeight="31.0" prefWidth="146.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblRecentOrders" layoutX="362.0" layoutY="146.0" prefHeight="600.0" prefWidth="760.0">
+        <columns>
+          <TableColumn prefWidth="92.0" text="Order ID" />
+          <TableColumn prefWidth="150.0" text="Customer Name" />
+          <TableColumn prefWidth="168.0" text="Ordered Item" />
+          <TableColumn prefWidth="87.0" text="Qty" />
+          <TableColumn prefWidth="124.0" text="Status" />
+          <TableColumn prefWidth="138.0" text="Total Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="641.0" text="Balance :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBalance" layoutX="148.0" layoutY="635.0" prefHeight="31.0" prefWidth="146.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="31.0" layoutY="597.0" text="Paid Amount :">
+         <font>
+            <Font name="Ebrima Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPaidAmount" layoutX="148.0" layoutY="591.0" onAction="#calculateBalance" prefHeight="31.0" prefWidth="146.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
