@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Sun-Rest.iml" filepath="$PROJECT_DIR$/Sun-Rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sun-Rest-Admin/Sun-Rest-Admin.iml" filepath="$PROJECT_DIR$/Sun-Rest-Admin/Sun-Rest-Admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sun-Rest-Chef/Sun-Rest-Chef.iml" filepath="$PROJECT_DIR$/Sun-Rest-Chef/Sun-Rest-Chef.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sun-Rest-Common/Sun-Rest-Common.iml" filepath="$PROJECT_DIR$/Sun-Rest-Common/Sun-Rest-Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sun-Rest-Server/Sun-Rest-Server.iml" filepath="$PROJECT_DIR$/Sun-Rest-Server/Sun-Rest-Server.iml" />
+    </modules>
+  </component>
+</project>
